@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Mon Parcours en Réseaux et Télécommunications</h1>
+
+        <section class="mb-5">
+            <h2 class="mb-3">Introduction</h2>
+            <p class="lead">Quel parcours ?</p>
+            <p>Le parcours que j'aimerais avoir en 2ème année est le parcours <strong>Réseaux Opérateurs Multimédia (ROM)</strong>.</p>
+            <h3 class="mt-3">Pourquoi ce parcours ?</h3>
+            <p>Ce qui m'a donné envie de faire ce parcours, c'est la manipulation concrète des équipements. En effet, configurer un switch Cisco, router des paquets, optimiser un réseau... c'est là que je me sens dans mon élément. Et puis, la virtualisation, comme créer des machines Linux, monter des environnements de test, c'est comme construire un propre monde numérique. L'autre parcours ("cybersécurité") est super intéressant, mais je préfère la connectivité des équipements, là où les données circulent et où les réseaux prennent vie. C'est pour ça que j'ai choisi Réseaux Opérateurs et Multimédia : pour construire, connecter et faire évoluer les infrastructures de demain.</p>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-3">Parcours, Compétences et Apprentissages Critiques</h2>
+
+            <h3 class="mt-3">Compétences</h3>
+            <p>
+                <span class="badge bg-primary me-2">Administrer</span>
+                <span class="badge bg-success me-2">Connecter</span>
+                <span class="badge bg-info me-2">Programmer</span>
+                <span class="badge bg-warning me-2 text-dark">Rapprocher</span>
+                <span class="badge bg-danger">Unifier</span>
+            </p>
+
+            <h3 class="mt-3">Apprentissages Critiques de l'année prochaine</h3>
+            <ul class="list-group">
+                <li class="list-group-item">AC24.01ROM | Administrer les réseaux d’accès fixes et mobiles</li>
+                <li class="list-group-item">AC24.02ROM | Virtualiser des services réseaux</li>
+                <li class="list-group-item">AC24.03ROM | Décrire/comprendre l’architecture et les offres des opérateurs</li>
+                <li class="list-group-item">AC24.04ROM | Gérer le routage/commutation et les interconnexions</li>
+                <li class="list-group-item">AC24.05ROM | Automatiser la gestion des équipements réseaux</li>
+                <li class="list-group-item">AC25.01ROM | Choisir une architecture et déployer des services de ToIP</li>
+            </ul>
+
+            <h2 class="mt-4">Liens entre les apprentissages critiques de cette année et de l'année prochaine</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Apprentissage Critique de l'année Prochaine</th>
+                            <th>Apprentissage Critique de cette année liés</th>
+                            <th>Pourquoi ?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>AC24.01ROM</strong><br>Administrer les réseaux d’accès fixes et mobiles</td>
+                            <td>
+                                AC11.01 – Maîtriser les lois fondamentales de l'électricité afin d'intervenir sur des équipements de réseaux et télécommunications.<br>
+                                AC11.02 – Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'internet.<br>
+                                AC11.03 – Configurer les fonctions de base du réseau local<br>
+                                AC11.05 – Savoir identifier les dysfonctionnements du réseau local.<br>
+                                AC12.03 – Déployer des supports de transmission<br>
+                                AC13.01 – utiliser un système informatique et ses outils
+                            </td>
+                            <td>Comprendre les bases matérielles et logicielles pour configurer et dépanner les réseaux.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AC24.02ROM</strong><br>Virtualiser des services réseaux</td>
+                            <td>
+                                AC11.04 – Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis.<br>
+                                AC13.01 – Utiliser un système informatique et ses outils.<br>
+                                AC13.02 / AC13.03 – Lire, exécuter, corriger et modifier un programme.
+                            </td>
+                            <td>Manipuler des systèmes d'exploitation et utiliser des scripts pour automatiser les déploiements.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AC24.03ROM</strong><br>Architecture & offres opérateurs</td>
+                            <td>
+                                AC11.02 – Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'internet.<br>
+                                AC12.02 – Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement<br>
+                                AC12.05 – Communiquer avec un tiers (client, collaboration...) et adapter son discours et sa langue à son interlocuteur.<br>
+                                AC13.06 – S'intégrer dans un environnement propice au développement et au travail collaboratif.
+                            </td>
+                            <td>Analyser les offres techniques et commerciales des opérateurs avec des bases solides en télécom.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AC24.04ROM</strong><br>Routage / Commutation / Interconnexions</td>
+                            <td>
+                                AC11.03 – Configurer les fonctions de base du réseau local<br>
+                                AC11.05 – Savoir identifier les dysfonctionnements du réseau local.<br>
+                                AC12.03 – Déployer des supports de transmission<br>
+                                AC13.01 – Utiliser un système informatique et ses outils.
+                            </td>
+                            <td>Passer du réseau local aux interconnexions plus complexes avec maîtrise des outils.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AC24.05ROM</strong><br>Automatiser gestion équipements</td>
+                            <td>
+                                AC13.02 / AC13.03 – Lire, exécuter, corriger et modifier un programme.<br>
+                                AC13.05 – Choisir les mécanismes de gestion de données adaptés au développement de l'outil et argumenter ses choix.<br>
+                                AC13.06 – S'intégrer dans un environnement propice au développement et au travail collaboratif.
+                            </td>
+                            <td>Automatiser via scripts/API et organiser les configurations réseau efficacement.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AC25.01ROM</strong><br>Déployer des services de ToIP</td>
+                            <td>
+                                AC12.04 – Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis.<br>
+                                AC11.03 – Configurer les fonctions de base du réseau local<br>
+                                AC12.05 – Communiquer avec un tiers (client, collaboration...) et adapter son discours et sa langue à son interlocuteur.
+                            </td>
+                            <td>Déployer des services VoIP nécessite de comprendre le réseau IP et les services associés.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-3">Mon Portfolio</h2>
+            <div class="ratio ratio-16x9">
+                <iframe src="{{ path('app_portfolio') }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <h2 class="mt-4 mb-3">Points forts et améliorations</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h3>Mes points forts</h3>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="{{ path('app_reflexives1') }}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <h3>Améliorations</h3>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="{{ path('app_reflexives2') }}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-3">Conclusion</h2>
+            <p>
+  Cette première année en Réseaux et Télécommunications m’a permis de découvrir un domaine dans lequel je peux m'épanouir. 
+  J’ai particulièrement apprécié la manipulation d’équipements réseau, la configuration des switchs et routeurs, ainsi que la virtualisation.
+  Ces expériences ont confirmé mon envie de m’orienter vers le parcours <strong>Réseaux Opérateurs Multimédia (ROM)</strong>, car je souhaite construire, connecter et faire évoluer les infrastructures réseau de demain.
+</p>
+<p>
+  Je suis conscient que certains points restent à renforcer, notamment en automatisation ou en codage,
+  et je prévois d’y consacrer du temps pendant les vacances pour arriver plus serein en deuxième année.
+  Je compte également continuer à m’exercer sur <em>Packet Tracer</em> et approfondir mes compétences en <em>Linux</em>.
+</p>
+<p>
+  J’aborde la suite de mon parcours avec motivation, curiosité et l’envie de toujours progresser.
+  J’ai désormais une vision plus claire de mon projet professionnel, et je suis déterminé à donner le meilleur de moi-même pour atteindre mes objectifs.
+</p>
+            </section>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}

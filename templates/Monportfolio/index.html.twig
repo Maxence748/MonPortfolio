@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="portfolio-container">
+    <h1 class="portfolio-title">Bienvenue sur mon E-Portfolio</h1>
+
+    <div class="profile-section">
+        <div class="personal-info">
+            <p><strong>Nom :</strong> Boyer</p>
+            <p><strong>Prénom :</strong> Maxence</p>
+            <p><strong>Groupe :</strong> B2</p>
+        </div>
+
+        <div class="introduction">
+            <p>Je m'appelle Maxence Boyer, j'habite en Haute-Loire à Sainte-Sigolène et je suis en première année de réseau et télécommunication à l'IUT de Roanne.</p>
+        </div>
+    </div>
+
+    <div class="image-section">
+        <img src="{{ asset('images/image_page1.jpg') }}" alt="Maxence Boyer" class="profile-image">
+    </div>
+</div>
+
+<style>
+    .portfolio-container {
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    .portfolio-title {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .profile-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .personal-info {
+        text-align: left;
+        margin-right: 50px;
+    }
+
+    .introduction {
+        text-align: left;
+        max-width: 600px;
+    }
+
+    .profile-image {
+        width: 300px;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+{% endblock %}

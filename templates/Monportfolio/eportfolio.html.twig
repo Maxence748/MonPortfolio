@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Bienvenue sur mon e-portfolio</h1>
+
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h2>Administrer</h2>
+            </div>
+            <div class="card-body">
+                <p>Consiste à gérer, configurer et superviser les infrastructures réseaux et systèmes informatiques afin d'assurer leur bon fonctionnement, leur sécurité et leur disponibilité pour les utilisateurs.</p>
+                <button class="btn btn-outline-primary toggle-btn" data-target="details-admin">Afficher plus</button>
+
+                <div class="details mt-3" id="details-admin" style="display: none;">
+                    <ul class="list-unstyled">
+                        <li>Dans la compétence AC11.02 (Comprendre l’architecture et les fondements des systèmes numériques ...) en R1.06, j'ai su câbler différents composants led, résistance etc sur une broadboard.</li>
+                        <div class="image-item d-flex justify-content-around">
+                            <img src="{{ asset('images/broadboard.png') }}" alt="Schéma de câblage que nous avons à la suite réaliser en réel" class="img-fluid" style="max-width: 30%;">
+                            <img src="{{ asset('images/coder r1.06.png') }}" alt="Codage des différentes sorties de la carte arduino" class="img-fluid" style="max-width: 30%;">
+                            <img src="{{ asset('images/téléverser programme.png') }}" alt="Téléversement du programme" class="img-fluid" style="max-width: 30%;">
+                        </div>
+                        <li class="mt-3">Dans les compétences AC11.03 (Configurer les fonctions de base du réseau local), AC11.05 (Savoir identifier les dysfonctionnements du réseau local) ainsi que dans la compétence AC11.06 (Installer un poste client, expliquer la procédure mise en place), j'ai su configurer et mettre en place un réseau local en simulation (R1.01b et SAE1.02) et en réel (R1.03 et SAE1.02).</li>
+                        <li class="mt-3">En R1.01b, on a appris en simulation à configurer un réseau à l'aide du logiciel Packet Tracer. Afin de le mettre pour notre projet en SAE1.02.</li>
+                        <div class="image-item">
+                            <img src="{{ asset('images/configuration packet tracer.png') }}" alt="Configuration Packet Tracer" class="img-fluid">
+                        </div>
+                        <li class="mt-3">En R1.03 et SAE1.02, on a utilisé de vrais outils comme les switchs, serveurs TFTP, Putty ...</li>
+                        <div class="image-item d-flex justify-content-around">
+                            <img src="{{ asset('images/cablage réseau1.png') }}" alt="Câblage réseau 1" class="img-fluid" style="max-width: 45%;">
+                            <img src="{{ asset('images/cablage réseau2.png') }}" alt="Câblage réseau 2" class="img-fluid" style="max-width: 45%;">
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h2>Connecter</h2>
+            </div>
+            <div class="card-body">
+                <p>Consiste à établir, configurer et maintenir les connexions entre les équipements et réseaux pour assurer une communication efficace et fiable.</p>
+                <button class="btn btn-outline-success toggle-btn" data-target="connect-desc">Afficher plus</button>
+
+                <div class="details mt-3" id="connect-desc" style="display: none;">
+                    <p>Dans la compétence AC12.01 (Mesurer et analyser les signaux) en R1.04, nous avons appris à utiliser des appareils comme l'oscilloscope, le multimètre etc ... Afin de faire les mesures d'une résistance, d'une tension ...</p>
+                    <div class="image-item d-flex justify-content-around">
+                        <img src="{{ asset('images/oscilloscope.jpg') }}" alt="Oscilloscope" class="img-fluid" style="max-width: 45%;">
+                        <img src="{{ asset('images/multimètre.jpg') }}" alt="Multimètre" class="img-fluid" style="max-width: 45%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                <h2>Communiquer</h2>
+            </div>
+            <div class="card-body">
+                <p>Consiste à transmettre efficacement des informations techniques ou fonctionnelles, que ce soit à des équipes, des clients ou des partenaires, en utilisant des outils et supports adaptés.</p>
+                <button class="btn btn-outline-info toggle-btn" data-target="comm-desc">Afficher plus</button>
+
+                <div class="details mt-3" id="comm-desc" style="display: none;">
+                    <ul class="list-unstyled">
+                        <li>Dans la compétence AC13.01, en R1.08 nous avons appris à créer et à utiliser une machine virtuelle à l'aide de VirtualBox.</li>
+                        <li>Dans un premier temps, nous avons appris à installer une machine virtuelle sur notre ordinateur.</li>
+                        <div class="image-item">
+                            <img src="{{ asset('images/virtualbox.jpg') }}" alt="VM" class="img-fluid">
+                        </div>
+                        <li class="mt-3">Ensuite, nous avons appris à utiliser l'environnement avec un jeu "Gameshell" pour apprendre les commandes.</li>
+                        <div class="image-item d-flex justify-content-around">
+                            <img src="{{ asset('images/Gameshell1.png') }}" alt="Gameshell 1" class="img-fluid" style="width: 200px; height: auto;">
+                            <img src="{{ asset('images/gameshell.png') }}" alt="Jeu Gameshell" class="img-fluid" style="max-width: 45%;">
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const target = document.getElementById(targetId);
+
+                if (target.style.display === 'none' || target.style.display === '') {
+                    target.style.display = 'block';
+                    this.textContent = 'Afficher moins';
+                } else {
+                    target.style.display = 'none';
+                    this.textContent = 'Afficher plus';
+                }
+            });
+        });
+    </script>
+{% endblock %}

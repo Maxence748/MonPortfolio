@@ -1,0 +1,246 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Maxence Boyer</title>
+    <style>
+        /* Palette de couleurs */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --accent-color: #28a745;
+            --background-color: #f8f9fa;
+            --text-color: #343a40;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 960px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px auto; /* Centrer le conteneur */
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-content {
+            padding: 1rem 2rem;
+        }
+
+        .personal-info p {
+            margin: 0.5rem 0;
+        }
+
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-title {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .experience-date {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skill-item {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            border-radius: 16px;
+            padding: 0.25rem 0.75rem;
+            margin: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+            border-top: 1px solid #dee2e6;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInBottom {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Maxence Boyer</h1>
+            <p>Administrateur réseau (en recherche d'alternance)</p>
+        </div>
+
+        <div class="section-content">
+            <section class="personal-info">
+                <h2 class="section-title">Informations Personnelles</h2>
+                <p><strong>Email :</strong> maxence.boyer15112005@gmail.com</p>
+                <p><strong>Téléphone :</strong> 0625602131</p>
+                <p><strong>Permis :</strong> B (novembre 2023)</p>
+            </section>
+
+            <section class="description">
+                <h2 class="section-title">Description</h2>
+                <p>Étudiant en B.U.T. Réseaux et Télécommunications, motivé et passionné par les technologies réseau.
+                Toujours en quête de nouvelles compétences, j'aime approfondir mes connaissances techniques. En dehors
+                des études, je pratique le saxophone et la course à pied pour allier créativité et dynamisme.</p>
+            </section>
+
+            <section class="formations">
+                <h2 class="section-title">Formations</h2>
+                <div class="experience-item">
+                    <p class="experience-title">BUT Réseaux et télécommunications</p>
+                    <p class="experience-date">lère année IUT de Roanne en cours</p>
+                </div>
+                <div class="experience-item">
+                    <p class="experience-title">BAC STI2D mention assez-bien</p>
+                    <p class="experience-date">Lycée NDC Monistrol sur Loire - Juin 2024</p>
+                </div>
+                <div class="experience-item">
+                    <p class="experience-title">Brevet des collèges mention bien</p>
+                    <p class="experience-date">Collège Sacré Coeur Sainte-Sigolène - Juin 2021</p>
+                </div>
+                <div class="experience-item">
+                    <p class="experience-title">Certificat PIX</p>
+                    <p class="experience-date">Mai 2024</p>
+                </div>
+            </section>
+
+            <section class="experiences">
+                <h2 class="section-title">Expériences professionnelles et personnelles</h2>
+                <div class="experience-item">
+                    <p class="experience-title">Formation administrateur / administratrice réseau informatique</p>
+                    <p class="experience-date">BUT 1 RESEAUX TELECOMMUNICATION | septembre 2024 → Présent</p>
+                    <ul>
+                        <li>Installer un équipement informatique</li>
+                        <li>Identifier des solutions et des pistes d'actions au regard du diagnostic établi</li>
+                        <li>Gérer les droits d'accès des utilisateurs</li>
+                        <li>Élaborer et mettre en oeuvre un plan de tests</li>
+                        <li>Déterminer les causes de dysfonctionnements</li>
+                        <li>Gérer la sécurité informatique</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <p class="experience-title">Agent / Agente de déchetterie</p>
+                    <p class="experience-date">Déchetterie de Monistrol Sur Loire | août 2024 → Présent</p>
+                    <ul>
+                        <li>Adapter son discours selon l'interlocuteur</li>
+                        <li>Maintenir l'état de propreté d'un point de collecte</li>
+                        <li>Charger et évacuer des déchets, gravats</li>
+                        <li>Appliquer les procédures de refus de collecte</li>
+                        <li>Assurer l'entretien/nettoyage courant du matériel après utilisation dans les conditions d'hygiène et de sécurité requises</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <p class="experience-title">Culture, art et spectacle</p>
+                    <p class="experience-date">Harmonie de Sainte Sigolène | septembre 2020 → Présent</p>
+                    <ul>
+                        <li>Participer à l'organisation d'un festival (accueil, sécurité, consigne...)</li>
+                        <li>Animer des ateliers créatifs et artistiques (saxophone)</li>
+                        <li>Aider à la promotion d'un spectacle, d'une manifestation, d'une exposition</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="competences">
+                <h2 class="section-title">Compétences</h2>
+                <div>
+                    <h3 class="section-title">Techniques</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Configuration et administration de réseaux</li>
+                        <li class="skill-item">Sécurité informatique</li>
+                        <li class="skill-item">Surveillance et maintenance des infrastructure réseau</li>
+                        <li class="skill-item">Gestion de versions</li>
+                        <li class="skill-item">Installation et configuration de postes de travail</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="section-title">Transversales</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Travail en équipe</li>
+                        <li class="skill-item">Rédaction de documents techniques et procédures</li>
+                        <li class="skill-item">Sens du service et écoute active</li>
+                        <li class="skill-item">Respect des objectifs</li>
+                        <li class="skill-item">Esprit d'amélioration continue</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="langues">
+                <h2 class="section-title">Langues</h2>
+                <p><strong>Anglais :</strong> B1</p>
+                <p><strong>Espagnol :</strong> A1+</p>
+            </section>
+
+            <section class="mots-cles">
+                <h2 class="section-title">Mots clés</h2>
+                <ul class="skill-list">
+                    <li class="skill-item">Rigueur</li>
+                    <li class="skill-item">Sérieux</li>
+                    <li class="skill-item">Appliqué</li>
+                    <li class="skill-item">Motivé</li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            <p>Dernière mise à jour : Mars 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+{% endblock %}
